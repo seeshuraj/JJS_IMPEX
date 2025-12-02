@@ -360,7 +360,10 @@
                         :class="show ? 'opacity-100 scale-100' : 'opacity-0 scale-95'"
                         :style="`transition-delay: ${index * 200}ms`"
                         class="bg-yellow-50 rounded-xl p-8 text-center hover:bg-yellow-100 transition duration-500 border border-yellow-200 shadow-sm hover:shadow-md transform">
-                        <div class="text-5xl mb-4 animate-bounce duration-3000">🇬🇳</div>
+                        <div class="mb-4 animate-bounce duration-3000">
+                            <img src="https://flagcdn.com/w160/gn.png" alt="Guinea Flag"
+                                class="h-16 mx-auto drop-shadow-md">
+                        </div>
                         <h3 class="text-2xl font-bold text-yellow-900 mb-2" x-text="grade.name"></h3>
                         <div class="grid grid-cols-2 gap-4 mt-4 text-left bg-white p-4 rounded-lg">
                             <div>
