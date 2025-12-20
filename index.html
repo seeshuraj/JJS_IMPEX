@@ -638,39 +638,87 @@
                     <div id="map" class="rounded-xl shadow-lg h-64 w-full border-2 border-yellow-100"></div>
                 </div>
 
-                <form action="https://formspree.io/f/your-form-id" method="POST"
-                    class="glass-panel p-8 rounded-xl transition-all duration-700 delay-400 transform"
+                <div class="glass-panel p-8 rounded-xl transition-all duration-700 delay-400 transform"
                     :class="show ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'">
-                    <div class="space-y-6">
-                        <div>
-                            <label for="full-name" class="block text-sm font-medium text-gray-700 mb-2">Full
-                                Name</label>
-                            <input type="text" id="full-name" name="name" placeholder="Your Name"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 focus:outline-none transition"
-                                required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
-                                Address</label>
-                            <input type="email" id="email" name="_replyto" placeholder="your@email.com"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 focus:outline-none transition"
-                                required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="How can we help you?"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 focus:outline-none transition"
-                                required></textarea>
-                        </div>
-                        <input type="hidden" name="_subject" value="New Contact Form Submission from JJS Impex">
-                        <button type="submit"
-                            class="w-full bg-yellow-600 text-white py-3 rounded-lg font-bold hover:bg-yellow-700 transition shadow-md hover:scale-105 transform">
-                            Send Message
-                        </button>
-                        <p class="text-xs text-gray-500 text-center mt-4">Note: This form uses Formspree. Replace
-                            'your-form-id' with your actual ID to receive emails.</p>
-                    </div>
-                </form>
+                    <div id="zf_div_AUKFTXLIG_4up8NCwXeEn68g7Yp3ZKcEdnvMGI_OiSQ"></div>
+                    <script type="text/javascript">
+                        (function () {
+                            try {
+                                var f = document.createElement("iframe");
+                                var ifrmSrc = 'https://forms.zohopublic.in/contactjjsi1/form/SimpleContactUs/formperma/AUKFTXLIG_4up8NCwXeEn68g7Yp3ZKcEdnvMGI_OiSQ?zf_rszfm=1';
+                                try {
+                                    if (typeof ZFAdvLead != "undefined" && typeof zfutm_zfAdvLead != "undefined") {
+                                        for (var prmIdx = 0; prmIdx < ZFAdvLead.utmPNameArr.length; prmIdx++) {
+                                            var utmPm = ZFAdvLead.utmPNameArr[prmIdx];
+                                            utmPm = (ZFAdvLead.isSameDomian && (ZFAdvLead.utmcustPNameArr.indexOf(utmPm) == -1)) ? "zf_" + utmPm : utmPm;
+                                            var utmVal = zfutm_zfAdvLead.zfautm_gC_enc(ZFAdvLead.utmPNameArr[prmIdx]);
+                                            if (typeof utmVal !== "undefined") {
+                                                if (utmVal != "") {
+                                                    if (ifrmSrc.indexOf('?') > 0) {
+                                                        ifrmSrc = ifrmSrc + '&' + utmPm + '=' + utmVal;
+                                                    } else {
+                                                        ifrmSrc = ifrmSrc + '?' + utmPm + '=' + utmVal;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    if (typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined") {
+                                        for (var prmIdx = 0; prmIdx < ZFLead.utmPNameArr.length; prmIdx++) {
+                                            var utmPm = ZFLead.utmPNameArr[prmIdx];
+                                            var utmVal = zfutm_zfLead.zfutm_gC_enc(ZFLead.utmPNameArr[prmIdx]);
+                                            if (typeof utmVal !== "undefined") {
+                                                if (utmVal != "") {
+                                                    if (ifrmSrc.indexOf('?') > 0) {
+                                                        ifrmSrc = ifrmSrc + '&' + utmPm + '=' + utmVal;//No I18N
+                                                    } else {
+                                                        ifrmSrc = ifrmSrc + '?' + utmPm + '=' + utmVal;//No I18N
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                } catch (e) { }
+                                f.src = ifrmSrc;
+                                f.style.border = "none";
+                                f.style.height = "978px";
+                                f.style.width = "100%";
+                                f.style.transition = "all 0.5s ease";
+                                f.setAttribute("aria-label", 'Contact Us');
+                                var d = document.getElementById("zf_div_AUKFTXLIG_4up8NCwXeEn68g7Yp3ZKcEdnvMGI_OiSQ");
+                                d.appendChild(f);
+                                window.addEventListener('message', function () {
+                                    var evntData = event.data;
+                                    if (evntData && evntData.constructor == String) {
+                                        var zf_ifrm_data = evntData.split("|");
+                                        if (zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3) {
+                                            var zf_perma = zf_ifrm_data[0];
+                                            var zf_ifrm_ht_nw = (parseInt(zf_ifrm_data[1], 10) + 15) + "px";
+                                            var iframe = document.getElementById("zf_div_AUKFTXLIG_4up8NCwXeEn68g7Yp3ZKcEdnvMGI_OiSQ").getElementsByTagName("iframe")[0];
+                                            if ((iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0) {
+                                                var prevIframeHeight = iframe.style.height;
+                                                var zf_tout = false;
+                                                if (zf_ifrm_data.length == 3) {
+                                                    iframe.scrollIntoView();
+                                                    zf_tout = true;
+                                                }
+                                                if (prevIframeHeight != zf_ifrm_ht_nw) {
+                                                    if (zf_tout) {
+                                                        setTimeout(function () {
+                                                            iframe.style.height = zf_ifrm_ht_nw;
+                                                        }, 500);
+                                                    } else {
+                                                        iframe.style.height = zf_ifrm_ht_nw;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }, false);
+                            } catch (e) { }
+                        })();
+                    </script>
+                </div>
             </div>
         </div>
     </section>
