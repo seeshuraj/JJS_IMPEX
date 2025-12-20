@@ -4,10 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JJS Impex - Premium Raw Cashew Nut Exporters</title>
+    <title>JJS Impex - Premium Raw Cashew Nut Exporters from Guinea</title>
+    <meta name="description"
+        content="JJS Impex is a leading exporter of premium Raw Cashew Nuts (RCN) from Guinea. We supply high-quality Kankan and Boke grades directly from farms to global processing units.">
+    <meta name="keywords"
+        content="Raw Cashew Nuts, RCN Guinea, Cashew Export, JJS Impex, Kankan Cashew, Boke Cashew, Cashew Nut Supplier, Guinea Agriculture, RCN KOR, Cashew Nut Grades">
+    <meta name="author" content="JJS Impex">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jjsimpex.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jjsimpex.com/">
+    <meta property="og:title" content="JJS Impex - Premium Raw Cashew Nut Exporters from Guinea">
+    <meta property="og:description"
+        content="Leading exporter of high-quality Raw Cashew Nuts (RCN) directly from Guinea's finest plantations.">
+    <meta property="og:image" content="https://jjsimpex.com/images/src.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jjsimpex.com/">
+    <meta property="twitter:title" content="JJS Impex - Premium Raw Cashew Nut Exporters from Guinea">
+    <meta property="twitter:description"
+        content="Leading exporter of high-quality Raw Cashew Nuts (RCN) directly from Guinea's finest plantations.">
+    <meta property="twitter:image" content="https://jjsimpex.com/images/src.jpeg">
+
     <link rel="icon" type="image/jpeg" href="images/Icon.jpg">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "JJS Impex",
+      "url": "https://jjsimpex.com/",
+      "logo": "https://jjsimpex.com/images/Icon.jpg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+224-622935756",
+        "contactType": "sales",
+        "areaServed": "Global",
+        "availableLanguage": ["English", "French"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/jjs-impex",
+        "https://www.facebook.com/jjsimpex"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "JJS Impex",
+      "image": "https://jjsimpex.com/images/src.jpeg",
+      "@id": "",
+      "url": "https://jjsimpex.com/",
+      "telephone": "+224-622935756",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Port of Conakry",
+        "addressLocality": "Conakry",
+        "addressCountry": "GN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 9.659217,
+        "longitude": -13.560062
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Kankan Grade Raw Cashew Nuts",
+          "description": "KOR 42-45, Nut Count 200"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Boke Grade Raw Cashew Nuts",
+          "description": "KOR 46-50, Nut Count 200"
+        }
+      ]
+    }
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -270,7 +359,8 @@
                 </div>
 
                 <button class="lg:hidden text-gray-600 hover:text-yellow-700 focus:outline-none"
-                    @click="mobileMenuOpen = !mobileMenuOpen">
+                    @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle mobile menu"
+                    title="Toggle mobile menu">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -291,46 +381,49 @@
                     class="text-gray-600 hover:text-yellow-700 transition font-medium text-lg block border-b border-gray-100 pb-2">About</a>
                 <a href="#workflow" @click="mobileMenuOpen = false"
                     class="text-gray-600 hover:text-yellow-700 transition font-medium text-lg block border-b border-gray-100 pb-2">Workflow</a>
-                <a href="#products" @click="mobileMenuOpen = false"
-                    class="text-gray-600 hover:text-yellow-700 transition font-medium text-lg block border-b border-gray-100 pb-2">Products</a>
-                <a href="#team" @click="mobileMenuOpen = false"
-                    class="text-gray-600 hover:text-yellow-700 transition font-medium text-lg block border-b border-gray-100 pb-2">Team</a>
-                <a href="#contact" @click="mobileMenuOpen = false"
-                    class="bg-yellow-700 text-white px-6 py-3 rounded-lg hover:bg-yellow-800 transition shadow-lg text-center font-medium block mt-4">Contact
-                    Us</a>
-            </div>
-        </div>
-    </nav>
-
-    <section class="hero-bg min-h-screen flex items-center pt-24" x-data="{ show: false }"
-        x-init="setTimeout(() => show = true, 100)">
-        <div class="hero-overlay"></div>
-        <div class="container mx-auto px-6 text-center text-white relative z-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight transition-all duration-1000 transform text-shadow-lg"
-                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
-                Premium Raw Cashew Nuts<br>
-                <span class="text-gradient-gold block mt-2 md:inline md:mt-0">Direct from Farm to Factory</span>
-            </h1>
-            <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-200 transition-all duration-1000 delay-300 transform text-shadow-lg"
-                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
-                We supply high-quality Raw Cashew Nuts (RCN) in shell, sourced directly from Guinea's finest
-                plantations for processing units worldwide.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center transition-all duration-1000 delay-500 transform"
-                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
-                <a href="#products"
-                    class="bg-yellow-600 text-white px-8 py-3 rounded-lg hover:bg-yellow-700 transition-transform transform hover:scale-105 shadow-lg font-medium tracking-wide">
-                    View Specifications
-                </a>
                 <a href="#contact"
                     class="border-2 border-yellow-400 text-yellow-100 px-8 py-3 rounded-lg hover:bg-white/10 transition-transform transform hover:scale-105 font-medium tracking-wide">
                     Place Order
                 </a>
             </div>
         </div>
+    </nav>
+
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+        x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)">
+        <div class="hero-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-yellow-600/20 border border-yellow-500/30 backdrop-blur-sm transition-all duration-1000 transform"
+                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'">
+                <span class="text-yellow-400 font-semibold tracking-widest text-sm uppercase">Premium Quality Cashew
+                    Exporters</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight transition-all duration-1000 delay-300 transform"
+                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+                Direct from Guinea's <br>
+                <span class="text-gradient-gold">Finest Plantations</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-500 transform"
+                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+                JJS Impex delivers high-grade Raw Cashew Nuts (RCN) with guaranteed out-turn and moisture levels to
+                global processing units.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 transform"
+                :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+                <a href="#products"
+                    class="bg-yellow-600 text-white px-10 py-4 rounded-lg hover:bg-yellow-700 transition-all transform hover:scale-105 font-bold shadow-xl hover:shadow-yellow-600/40">
+                    Explore Grades
+                </a>
+                <a href="#contact"
+                    class="border-2 border-white/30 text-white px-10 py-4 rounded-lg hover:bg-white/10 transition-all backdrop-blur-sm font-bold hover:border-white">
+                    Contact Sales
+                </a>
+            </div>
+        </div>
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow transition-all duration-1000 delay-1000 z-20"
             :class="show ? 'opacity-100' : 'opacity-0'">
-            <a href="#contact" class="text-white/80 hover:text-white transition">
+            <a href="#about" class="text-white/80 hover:text-white transition" aria-label="Scroll to About section"
+                title="Scroll to About section">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -367,7 +460,7 @@
                 <div class="relative h-96 rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 delay-400 transform"
                     :class="show ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'">
                     <div class="absolute inset-0 bg-gradient-earth opacity-20 z-10"></div>
-                    <img src="images/src.jpeg" alt="Cashew Processing"
+                    <img src="images/src.jpeg" alt="Raw Cashew Nut processing and quality inspection at JJS Impex"
                         class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
                 </div>
             </div>
@@ -548,20 +641,22 @@
                     @submit.prevent="alert('Message sent! We will contact you shortly.')">
                     <div class="space-y-6">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                            <input type="text"
+                            <label for="full-name" class="block text-sm font-medium text-gray-700 mb-2">Full
+                                Name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Your Name"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 focus:outline-none transition"
                                 required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                            <input type="email"
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
+                                Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 focus:outline-none transition"
                                 required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea rows="4"
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="How can we help you?"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 focus:outline-none transition"
                                 required></textarea>
                         </div>
@@ -590,7 +685,7 @@
     </footer>
 
     <div class="chatbot-container flex flex-col-reverse items-end gap-4" x-cloak>
-        <button @click="chatbotOpen = !chatbotOpen"
+        <button @click="chatbotOpen = !chatbotOpen" aria-label="Open support chat" title="Open support chat"
             class="bg-yellow-600 text-white p-4 rounded-full shadow-lg hover:bg-yellow-700 transition-transform transform hover:scale-110 border-2 border-white flex items-center justify-center w-16 h-16 z-50">
             <span x-show="!chatbotOpen">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
