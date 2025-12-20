@@ -1,225 +1,239 @@
 <!DOCTYPE html>
-rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,fr,vi,es,de,it,pt,ru,zh-CN,ja,ko,ar,hi,bn,id,ms,th,tr,pl,nl,sv,no,da,fi,cs,el,he,ro,uk,hu,sk',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript"
-    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<style>
-    [x-cloak] {
-        display: none;
-    }
+<html lang="en" x-data="app" class="scroll-smooth">
 
-    .fixed-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('images/raw_cashew_shells_bg.png') no-repeat center center/cover;
-        z-index: -1;
-    }
-
-    .hero-bg {
-        position: relative;
-    }
-
-    .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(rgba(20, 30, 20, 0.7), rgba(20, 30, 20, 0.8));
-        z-index: 0;
-    }
-
-    #map {
-        height: 400px;
-        width: 100%;
-        z-index: 10;
-    }
-
-    .chatbot-container {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        z-index: 9999;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJS Impex - Premium Raw Cashew Nut Exporters</title>
+    <link rel="icon" type="image/jpeg" href="images/Icon.jpg">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,vi,es,de,it,pt,ru,zh-CN,ja,ko,ar,hi,bn,id,ms,th,tr,pl,nl,sv,no,da,fi,cs,el,he,ro,uk,hu,sk',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        [x-cloak] {
+            display: none;
         }
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .fade-in {
-        animation: fadeIn 0.3s ease;
-    }
-
-    .bg-gradient-earth {
-        background: linear-gradient(135deg, #4d3b2a 0%, #2d5d2a 100%);
-    }
-
-    .text-gradient-gold {
-        background: linear-gradient(to right, #d4af37, #f2d06b);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: #d4af37;
-    }
-
-    .duration-3000 {
-        animation-duration: 3s;
-    }
-
-    .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .hover-lift:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    body {
-        font-family: 'Outfit', sans-serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: 'Playfair Display', serif;
-    }
-
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #fdf6e3;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #d97706;
-        border-radius: 5px;
-        border: 2px solid #fdf6e3;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #b45309;
-    }
-
-    ::selection {
-        background-color: #fde68a;
-        color: #78350f;
-    }
-
-    .glass-panel {
-        background: rgba(255, 255, 255, 0.85);
-        -webkit-backdrop-filter: blur(12px);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    }
-
-    .text-shadow-lg {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    @keyframes bounce-slow {
-
-        0%,
-        100% {
-            transform: translateY(0);
+        .fixed-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/raw_cashew_shells_bg.png') no-repeat center center/cover;
+            z-index: -1;
         }
 
-        50% {
-            transform: translateY(10px);
+        .hero-bg {
+            position: relative;
         }
-    }
 
-    .animate-bounce-slow {
-        animation: bounce-slow 2s infinite;
-    }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(20, 30, 20, 0.7), rgba(20, 30, 20, 0.8));
+            z-index: 0;
+        }
 
-    .goog-te-banner-frame.skiptranslate {
-        display: none !important;
-    }
+        #map {
+            height: 400px;
+            width: 100%;
+            z-index: 10;
+        }
 
-    body {
-        top: 0 !important;
-    }
+        .chatbot-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+        }
 
-    .goog-te-gadget {
-        font-family: 'Outfit', sans-serif !important;
-    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
 
-    .goog-te-gadget .goog-te-combo {
-        padding: 6px 12px;
-        border: 2px solid #fbbf24;
-        border-radius: 8px;
-        background: white;
-        color: #1f2937;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    #google_translate_element {
-        display: inline-block;
-    }
+        .fade-in {
+            animation: fadeIn 0.3s ease;
+        }
 
-    #google_translate_element select {
-        background: white !important;
-        border: 2px solid #fbbf24 !important;
-        border-radius: 8px !important;
-        padding: 4px 24px 4px 8px !important;
-        font-size: 12px !important;
-        font-weight: 500 !important;
-        color: #1f2937 !important;
-        cursor: pointer !important;
-        min-width: 120px !important;
-    }
+        .bg-gradient-earth {
+            background: linear-gradient(135deg, #4d3b2a 0%, #2d5d2a 100%);
+        }
 
-    @media (min-width: 768px) {
+        .text-gradient-gold {
+            background: linear-gradient(to right, #d4af37, #f2d06b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #d4af37;
+        }
+
+        .duration-3000 {
+            animation-duration: 3s;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fdf6e3;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 5px;
+            border: 2px solid #fdf6e3;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b45309;
+        }
+
+        ::selection {
+            background-color: #fde68a;
+            color: #78350f;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+
+        .text-shadow-lg {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 2s infinite;
+        }
+
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        .goog-te-gadget {
+            font-family: 'Outfit', sans-serif !important;
+        }
+
+        .goog-te-gadget .goog-te-combo {
+            padding: 6px 12px;
+            border: 2px solid #fbbf24;
+            border-radius: 8px;
+            background: white;
+            color: #1f2937;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #google_translate_element {
+            display: inline-block;
+        }
+
         #google_translate_element select {
-            padding: 8px 32px 8px 12px !important;
-            font-size: 14px !important;
-            min-width: 150px !important;
+            background: white !important;
+            border: 2px solid #fbbf24 !important;
+            border-radius: 8px !important;
+            padding: 4px 24px 4px 8px !important;
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            color: #1f2937 !important;
+            cursor: pointer !important;
+            min-width: 120px !important;
         }
-    }
 
-    .goog-logo-link {
-        display: none !important;
-    }
+        @media (min-width: 768px) {
+            #google_translate_element select {
+                padding: 8px 32px 8px 12px !important;
+                font-size: 14px !important;
+                min-width: 150px !important;
+            }
+        }
 
-    .goog-te-gadget {
-        color: transparent !important;
-    }
+        .goog-logo-link {
+            display: none !important;
+        }
 
-    .goog-te-gadget span {
-        display: none !important;
-    }
-</style>
+        .goog-te-gadget {
+            color: transparent !important;
+        }
+
+        .goog-te-gadget span {
+            display: none !important;
+        }
+    </style>
 </head>
 
 <body class="font-sans antialiased text-gray-800 bg-yellow-50/30" x-cloak>
@@ -454,7 +468,7 @@ rel="stylesheet">
             <h2 class="text-3xl font-bold text-center mb-12 text-yellow-900">Meet Our Team</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <template x-for="(member, index) in team" :key="member.id">
-                    <div x-data="{ show: false }" x-intersect.threshold.05="show = true"
+                    <div x-data="{ show: false }" x-intersect.threshold.05.once="show = true"
                         :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
                         :style="`transition-delay: ${index * 150}ms`"
                         class="bg-white rounded-xl shadow-md overflow-hidden text-center group hover:shadow-xl transition duration-500 transform hover:-translate-y-1">
